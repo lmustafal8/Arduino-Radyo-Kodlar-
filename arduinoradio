@@ -21,7 +21,7 @@ void setup() {
 }
 
 void loop() {
-  int reading = analogRead(0);  // A0 pininden analog okuma yap
+  int reading = analogRead(A0);  // A0 pininden analog okuma yap
   frekans = ((double)reading * (108.0 - 87.5)) / 1024.0 + 87.5;  // Okunan değeri frekansa dönüştür
   frekans = ((int)(frekans * 10)) / 10.0;                        // Frekansı bir ondalık basamağa yuvarla
   frekansAyarla();            // Frekansı ayarla
